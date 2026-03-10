@@ -20,6 +20,14 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+            <head>
+                <link rel="manifest" href="/manifest.json" />
+                <meta name="theme-color" content="#1B3022" />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+                <meta name="apple-mobile-web-app-title" content="Ayur Himalaya" />
+                <link rel="apple-touch-icon" href="/icon-192x192.png" />
+            </head>
             <body className="font-sans bg-ayur-bg text-ayur-charcoal">
                 <ConvexClientProvider>
                     <CartProvider>
@@ -28,6 +36,17 @@ export default function RootLayout({
                         </ClientLayout>
                     </CartProvider>
                 </ConvexClientProvider>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            if ('serviceWorker' in navigator) {
+                                window.addEventListener('load', function() {
+                                    navigator.serviceWorker.register('/sw.js');
+                                });
+                            }
+                        `,
+                    }}
+                />
             </body>
         </html>
     );

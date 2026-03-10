@@ -11,7 +11,7 @@ export default function Home() {
         <>
             <Hero />
 
-            <section className="py-24 px-6 md:px-12 lg:px-24 bg-ayur-bg">
+            <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-ayur-bg">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <div>
@@ -52,9 +52,9 @@ export default function Home() {
             </section>
 
             {/* Featured Highlight Section */}
-            <section className="py-24 px-6 md:px-12 lg:px-24 bg-white">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-                    <div className="w-full md:w-1/2 relative h-[600px] overflow-hidden rounded-2xl">
+            <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                    <div className="w-full md:w-1/2 relative h-[400px] md:h-[600px] overflow-hidden rounded-2xl">
                         <img
                             src="/products/meetha_atish_premium_1773167596536.png"
                             alt="Himalayan Ashwagandha"
@@ -93,7 +93,7 @@ export default function Home() {
             </section>
 
             {/* Sourcing & Ingredients Editorial Carousel equivalent */}
-            <section className="py-32 px-6 md:px-12 lg:px-24 bg-[#1B3022] text-[#F9F7F2] relative overflow-hidden">
+            <section className="py-16 md:py-32 px-6 md:px-12 lg:px-24 bg-[#1B3022] text-[#F9F7F2] relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
                     <img src="/products/shilajit_premium_1773167629811.png" alt="Texture" className="w-full h-full object-cover" />
                 </div>
@@ -134,7 +134,7 @@ export default function Home() {
             </section>
 
             {/* Benefits / Why Us */}
-            <section className="py-24 px-6 md:px-12 lg:px-24 bg-ayur-bg border-b border-[#1B3022]/10">
+            <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-ayur-bg border-b border-[#1B3022]/10">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
                     {[
                         { title: "Cruelty Free", desc: "Never tested on animals." },
@@ -154,7 +154,7 @@ export default function Home() {
             </section>
 
             {/* Philosophy Section */}
-            <section className="relative py-32 bg-ayur-forest text-ayur-bg overflow-hidden flex items-center justify-center text-center px-6">
+            <section className="relative py-24 md:py-32 bg-ayur-forest text-ayur-bg overflow-hidden flex items-center justify-center text-center px-6">
                 <div className="absolute inset-0 opacity-20">
                     <img
                         src="/products/kutki_premium_1773167646028.png"

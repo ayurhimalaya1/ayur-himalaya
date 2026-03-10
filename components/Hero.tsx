@@ -5,13 +5,13 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="relative w-full h-screen min-h-[600px] flex flex-col md:flex-row bg-[#F9F7F2] overflow-hidden pt-20">
+        <section className="relative w-full md:h-screen min-h-[600px] flex flex-col md:flex-row bg-[#F9F7F2] overflow-hidden pt-20">
             {/* Left Side - Mountain Imagery */}
             <motion.div
                 initial={{ x: "-100%", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-                className="w-full md:w-[60%] h-[50vh] md:h-full relative order-2 md:order-1"
+                className="w-full md:w-[60%] h-[40vh] md:h-full relative order-2 md:order-1"
             >
                 <Image
                     src="/banners/munsiyari_hero.png"
@@ -25,7 +25,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Right Side - Typography & CTA */}
-            <div className="w-full md:w-[40%] h-[50vh] md:h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 bg-[#F9F7F2] order-1 md:order-2 z-10">
+            <div className="w-full md:w-[40%] flex flex-col justify-center px-8 md:px-16 lg:px-24 bg-[#F9F7F2] order-1 md:order-2 z-10 py-12 md:py-0">
                 <motion.div
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}

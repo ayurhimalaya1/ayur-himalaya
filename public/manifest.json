@@ -1,0 +1,25 @@
+{
+    "name": "Ayur Himalaya",
+    "short_name": "AyurHimalaya",
+    "description": "High Altitude Ayurvedic Wellness",
+    "id": "/",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#F9F7F2",
+    "theme_color": "#1B3022",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
