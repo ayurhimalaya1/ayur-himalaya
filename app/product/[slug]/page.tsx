@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, use } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useQuery } from "convex/react";
@@ -9,9 +9,10 @@ import { useCartStore } from "@/store/cartStore";
 import { Plus, Minus } from "lucide-react";
 import { mockProducts } from "@/lib/mockProducts";
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-    // In a real app we would use useQuery(api.products.getBySlug, { slug: params.slug })
-    const product = mockProducts.find(p => p.slug === params.slug) || mockProducts[2]; // Fallback to Shilajit if not found
+export default function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = use(params);
+    // In a real app we would use useQuery(api.products.getBySlug, { slug })
+    const product = mockProducts.find(p => p.slug === slug) || mockProducts[2]; // Fallback to Shilajit if not found
 
 
     const addItem = useCartStore((state) => state.addItem);
